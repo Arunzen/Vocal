@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Vocal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="register-page">
+        <h1>Create an Account</h1>
+        <form action="#" method="POST" onsubmit="return handleRegister(event)">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a></p> 
+    </div>
+
+    <script>
+        function handleRegister(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Create a new workbook and add the registration data
+            const wb = XLSX.utils.book_new();
+            const ws_data = [
+                ["Username", "Email", "Password"],
+                [username, email, password],
+            ];
+            const ws = XLSX.utils.aoa_to_sheet(ws_data);
+            XLSX.utils.book_append_sheet(wb, ws, "Registrations");
+
+            // Export the workbook to an Excel file
+            XLSX.writeFile(wb, "registration_data.xlsx");
+
+            alert("Registration data saved! Redirecting to home...");
+            window.location.href = "home.html"; // Redirect to home page after registration
+            return false; // Prevent default form submission
+        }
+    </script>
+</body>
+</html>

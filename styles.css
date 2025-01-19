@@ -1,0 +1,110 @@
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.landing-page {
+    background-image: url('images/vocal-background-image.jpg'); /* Correct path to the image */
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.app-name {
+    font-size: 4em;
+}
+
+.tagline {
+    font-size: 1.5em;
+}
+
+.get-started-button {
+    background-color: #6B4C8A; /* Deep Vintage Mood color */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+}
+
+.get-started-button:hover {
+    background-color: #5A3E7D; /* Darker shade on hover */
+}
+
+.login-page, .register-page, .home-page {
+    width: 90%;
+    max-width: 800px; /* Limit width on larger screens */
+    margin: auto;
+}
+
+.home-header {
+    text-align: center;
+    padding: 20px;
+}
+
+.home-nav {
+    margin-top: 10px;
+}
+
+.home-nav a {
+    margin-right: 15px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.features {
+    margin-bottom: 40px; /* Space between sections */
+}
+
+.feature-item {
+    background-color: #D9CBAE; /* Light beige background for feature items */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Space between feature items */
+}
+
+.get-started {
+   text-align: center; /* Center align the get started section */
+   margin-top: 20px; /* Space above this section */
+}
+
+.get-started-button {
+   display: inline-block; /* Make button inline block */
+   padding: 10px 20px; /* Padding for button */
+   background-color: #4CAF50; /* Green button */
+   color: white; 
+   text-decoration: none; 
+   border-radius: 5px; 
+}
+
+.get-started-button:hover {
+   background-color: #45a049; /* Darker green on hover */
+}
+
+/* Footer styles */
+.home-footer {
+   text-align: center;
+   padding: 10px;
+   background-color: #6B4C8A; /* Deep Vintage Mood color */
+   color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+   .app-name {
+       font-size: 3em; /* Smaller font size on small screens */
+   }
+
+   .tagline {
+       font-size: 1.2em; /* Smaller tagline on small screens */
+   }
+
+   h1, h2, h3 {
+       font-size: 1.5em; /* Smaller heading in forms */
+   }
+}
